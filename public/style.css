@@ -1,0 +1,305 @@
+
+*{box-sizing:border-box}
+body{
+margin:0;
+background:radial-gradient(1200px 600px at 20% -10%, #1f2a44 0%, #0b1220 45%, #0a0f1a 100%);
+font-family:"Trebuchet MS",Verdana,sans-serif;
+color:#e7ecf5;
+min-height:100vh;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 32px;
+background:#141a2a;
+border-bottom:1px solid #2a344b;
+position:sticky;
+top:0;
+z-index:2;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+letter-spacing:0.5px;
+}
+
+.nav span{
+margin-left:18px;
+color:#cbd5e1;
+cursor:pointer;
+}
+
+.wrap{
+display:flex;
+justify-content:center;
+padding:26px 16px 40px;
+}
+
+.box{
+width:100%;
+max-width:980px;
+}
+
+.status-row{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:16px;
+margin-bottom:20px;
+}
+
+.stat-card{
+display:flex;
+align-items:center;
+gap:16px;
+padding:18px 22px;
+border-radius:12px;
+box-shadow:0 12px 30px rgba(0,0,0,0.35);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.stat-card.blue{background:linear-gradient(135deg,#1e3a8a,#274690)}
+.stat-card.orange{background:linear-gradient(135deg,#f97316,#fb923c)}
+
+.stat-icon{
+font-size:34px;
+}
+
+.stat-label{
+font-size:13px;
+opacity:0.9;
+}
+
+.stat-value{
+font-size:26px;
+font-weight:bold;
+margin-top:4px;
+}
+
+.section{
+background:#121a2b;
+border:1px solid #2b3550;
+border-radius:12px;
+padding:16px;
+margin-top:16px;
+box-shadow:0 10px 24px rgba(0,0,0,0.35);
+}
+
+.alert{
+background:#7f1d1d;
+border:1px solid #991b1b;
+color:#fee2e2;
+padding:10px 12px;
+border-radius:8px;
+margin-bottom:12px;
+}
+
+.section-title{
+font-weight:bold;
+margin-bottom:12px;
+font-size:16px;
+}
+
+.form-row{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
+align-items:end;
+}
+
+.test-row{
+margin-top:12px;
+}
+
+textarea,input,select{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+border:1px solid #2b3550;
+background:#0f1526;
+color:#e7ecf5;
+}
+
+textarea{
+min-height:90px;
+}
+
+.label{
+display:block;
+margin-bottom:6px;
+color:#9fb2d1;
+font-size:13px;
+}
+
+.row{
+margin:12px 0;
+}
+
+.btn-primary{
+background:#f97316;
+border:none;
+color:white;
+padding:12px 14px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+width:100%;
+}
+
+.btn-secondary{
+background:#1f2937;
+border:1px solid #334155;
+color:#e7ecf5;
+padding:10px 12px;
+border-radius:8px;
+cursor:pointer;
+width:100%;
+}
+
+.btn-danger{
+background:#f97316;
+border:none;
+color:white;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+width:100%;
+margin-top:10px;
+}
+
+.fila{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:14px;
+}
+
+.send-now{
+display:grid;
+grid-template-columns:1fr 220px;
+gap:12px;
+margin-bottom:12px;
+}
+
+.oferta-card{
+background:#0f1526;
+border:1px solid #2b3550;
+border-radius:10px;
+padding:12px;
+display:grid;
+grid-template-columns:100px 1fr;
+gap:12px;
+align-items:center;
+}
+
+.oferta-img{
+width:100px;
+height:100px;
+border-radius:8px;
+overflow:hidden;
+background:#0b1220;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.oferta-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.noimg{
+font-size:12px;
+color:#94a3b8;
+text-align:center;
+padding:8px;
+}
+
+.preco-antigo{
+text-decoration:line-through;
+color:#fca5a5;
+font-size:14px;
+}
+
+.nome-produto{
+font-size:14px;
+font-weight:bold;
+color:#e2e8f0;
+margin-bottom:6px;
+}
+
+.descricao-produto{
+font-size:13px;
+color:#cbd5e1;
+margin-bottom:6px;
+}
+
+.warning{
+background:#7c2d12;
+border:1px solid #9a3412;
+color:#ffedd5;
+padding:12px;
+border-radius:8px;
+margin-bottom:12px;
+}
+
+.warning-actions{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.warning-actions form{
+flex:1;
+}
+
+.envios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+}
+
+.agendada{
+font-size:12px;
+color:#fde68a;
+margin-top:6px;
+}
+
+.agendar-form{
+display:grid;
+grid-template-columns:1fr 1fr 120px;
+gap:8px;
+margin-top:10px;
+}
+
+@media (max-width:720px){
+ .warning-actions{flex-direction:column}
+ .agendar-form{grid-template-columns:1fr}
+}
+
+.preco-novo{
+color:#fdba74;
+font-size:18px;
+font-weight:bold;
+margin-top:6px;
+}
+
+.selo{
+margin-top:6px;
+font-weight:bold;
+}
+
+.empty{
+color:#9fb2d1;
+padding:8px 0;
+}
+
+@media (max-width:720px){
+ .topbar{padding:16px}
+ .nav span{margin-left:12px}
+ .oferta-card{grid-template-columns:1fr}
+ .oferta-img{width:100%;height:180px}
+ .send-now{grid-template-columns:1fr}
+}
